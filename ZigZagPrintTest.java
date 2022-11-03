@@ -6,6 +6,16 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
+/*
+ * ZigZagPrintTest has a test which checks whether given input array traversed in zigzag, starting from right upper corner, order or not.
+ * 1,  2, 3, 4
+ * 5,  6, 7, 8
+ * 9, 10,11,12
+ * 13,14,15,16
+ * traversed as 4, 3, 8, 12, 7, 2, 1, 6, 11, 16, 15, 10, 5, 9, 14, 13
+ * 
+ * @author hbozkurt
+ * */
 public class ZigZagPrintTest {
 
 	@Test
