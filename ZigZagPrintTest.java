@@ -106,14 +106,10 @@ public class ZigZagPrintTest {
 					if (startRow - 1 < 0 && startColumn - 1 >= 0) {
 						startColumn--;
 						direction = false;
-					} else if (startColumn - 1 < 0 && startRow - 1 >= 0) { // overflows from left column but not from
-																			// row
-																			// when traversing upwards
+					} else if (startColumn - 1 < 0 && startRow - 1 >= 0) { // overflows from left column but not from row when traversing upwards
 						startRow++;
 						direction = false;
-					} else if (startRow - 1 < 0 && startColumn - 1 <= 0) { // overflows from upper column and row, it
-																			// means end corner when traversing upwards
-
+					} else if (startRow - 1 < 0 && startColumn - 1 <= 0) { // overflows from upper column and row, it means end corner when traversing upwards
 						startRow++;
 						direction = false;
 					} else { // no overflows from upper column and row when traversing upwards
@@ -125,19 +121,10 @@ public class ZigZagPrintTest {
 					if (startRow + 1 >= input.length && startColumn + 1 < input[0].length) {
 						startColumn--;
 						direction = true;
-					} else if (startColumn + 1 >= input[0].length && startRow + 1 < input.length) {// overflows from
-																									// right column but
-																									// not from row when
-																									// traversing
-																									// downwards
+					} else if (startColumn + 1 >= input[0].length && startRow + 1 < input.length) {// overflows from right column but not from row when traversing downwards
 						startRow++;
 						direction = true;
-					} else if (startRow + 1 >= input.length && startColumn + 1 >= input[0].length) {// overflows from
-																									// right column and
-																									// lower row, it
-																									// means end
-																									// corner when
-																									// traversing
+					} else if (startRow + 1 >= input.length && startColumn + 1 >= input[0].length) {// overflows from right column and lower row, it means end corner when traversing
 						startColumn--;
 						direction = true;
 					} else { // no overflows from lower column and row when traversing upwards
